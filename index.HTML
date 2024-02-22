@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body oncontextmenu="return false;">
+    <!-- Header -->
+    <header class="menu">
+        <div class="container">
+            <a href="index.html"><img src="Saturn Visuals final 2-insta 33.png" alt="Your Logo" class="logo"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="INDEX.HTML">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="headshots.html">Headshots</a></li>
+                    <li><a href="weddings.html">Weddings</a></li>
+                    <li><a href="saturn-tv.html">Saturn TV</a></li>
+                </ul>
+                <button class="close-button">X</button> 
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Landing section -->
+        <section id="landing">
+            <h2>LONDON BASED CREATIVE COLLECTIVE WITH A FOCUS ON LIFESTYLE, EVENTS, COMMERCIAL AND CREATIVE COLLABORATIONS</h2>
+        </section>
+
+        <!-- Gallery images -->
+        <div class="gallery">
+            <!-- Script to generate gallery images -->
+            <script>
+                const gallery = document.querySelector('.gallery');
+                for (let i = 1; i <= 101; i++) {
+                    const imageBox = document.createElement('div');
+                    imageBox.classList.add('image-box');
+
+                    const image = document.createElement('img');
+                    image.src = `main page photos/IMAGE-${i}.jpg`;
+                    image.alt = `Image ${i}`;
+                    image.classList.add('gallery-image');
+                    
+                    imageBox.appendChild(image);
+                    gallery.appendChild(imageBox);
+                }
+            </script>
+        </div>
+    </main>
+
+   <!-- Footer -->
+<footer class="image-footer">
+    <div class="container">
+     <!-- Add 8 more image spaces -->
+     <a href="#"><img src="HEADER IMAGES/IMAGE-1.jpg" alt="Image 1" class="logo"></a>
+     <a href="#"><img src="HEADER IMAGES/IMAGE-2.jpg" alt="Image 2" class="logo"></a>
+     <a href="#"><img src="HEADER IMAGES/IMAGE-3.jpg" alt="Image 3" class="logo"></a>
+     <a href="#"><img src="HEADER IMAGES/IMAGE-4.jpg" alt="Image 4" class="logo"></a>
+     <a href="#"><img src="HEADER IMAGES/IMAGE-5.jpg" alt="Image 5" class="logo"></a>
+     <a href="#"><img src="HEADER IMAGES/IMAGE-6.jpg" alt="Image 6" class="logo"></a>
+     <a href="#"><img src="HEADER IMAGES/IMAGE-7.jpg" alt="Image 7" class="logo"></a>
+     <a href="#"><img src="HEADER IMAGES/IMAGE-8.jpg" alt="Image 8" class="logo"></a>
+     <h2>OUR CLIENTS</h2> </div>
+    </div>
+  </footer>
+  
+
+    <!-- Overlay for enlarged image -->
+    <div class="overlay">
+        <img src="" alt="Expanded Image" class="expanded-image">
+    </div>
+
+    <!-- Script for generating gallery images and handling image enlargement -->
+    <script src="app.js"></script>
+</body>
+</html>

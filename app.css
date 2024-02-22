@@ -1,0 +1,280 @@
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting default font family */
+body {
+    font-family: " DIN Neuziet Grotesk, Arial", sans-serif;
+}
+
+/* Header */
+/* Basic Styles with your existing header styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+   display: flex;
+justify-content: center; /* Center content horizontally */
+align-items: center; /* Center content vertically */
+padding: 20px 0; /* Adjust padding as needed */
+}
+
+.container {
+    display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px; /* Adjust padding */
+}
+
+.logo {
+width: 150px; /* Adjust logo size */
+height: auto;
+margin-left: 20px; /* Add margin to the left */
+}
+
+.nav-links {
+list-style-type: none;
+display: flex; /* Use flexbox for navigation links */
+justify-content: center; /* Center the items horizontally */
+align-items: center; /* Center the items vertically */
+flex-grow: 1; /* Allow the navigation links to grow and take up remaining space */
+line-height: 80px; /* Adjust this value based on the header height */
+}
+
+.nav-links li {
+margin-right: 20px;
+}
+
+.nav-links li:last-child {
+margin-right: 0;
+}
+
+.nav-links li a {
+color: #000000;
+text-decoration: none;
+text-transform: uppercase;
+transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {color: #ff69b4; /* Highlight pink on hover */
+}
+
+.menu-toggle {
+    display: none; /* Hide hamburger initially */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 5px;
+} 
+
+/* Media Query for Smaller Screens (Less than 780px) */
+@media screen and (max-width: 780px) {
+    .nav-links {
+        display: none;  /* Hide menu links by default */
+    }
+
+    .nav-links.open { /* Show menu when 'open' class is added */
+        display: block;
+        position: absolute;
+        top: 60px; /* Adjust as needed */ 
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0; /* Or the background you prefer */
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0; 
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger button */
+    }
+
+    /* Add your gallery scaling rule here */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+
+/* Main Content */
+#landing {
+    padding: 50px 20px; /* Adjust padding */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns for screens over 780px */
+    gap: 20px;
+    padding: 20px; /* Adjust padding */
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* Add pointer cursor for clickability */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+.gallery-image:hover {
+    box-shadow: 0 0 20px rgba(37, 40, 231, 0.678); /* Shadow overlay on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Adjust h2 font size */
+h2 {
+    font-family: "DIN Neuziet Grotesk", Arial, sans-serif;
+    font-size: 15px; /* Adjust the size as needed */
+    text-align: center;}
+
+/* Overlay for enlarged image */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.overlay.active {
+    display: flex;
+}
+.overlay .expanded-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Ensure it's on top of other content */
+  }
+  
+  .overlay.active {
+    display: flex; 
+  }
+  
+  /* Image Styles within the Overlay */
+  .expanded-image {
+    max-width: 90%; 
+    max-height: 90%; 
+  }
+  
+.overlay .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* Media Query for Smaller Screens (Less than 780px) */
+@media screen and (max-width: 780px) {
+    .nav-links {
+        display: none;  /* Hide menu links by default */
+    }
+
+    .nav-links.open { /* Show menu when 'open' class is added */
+        display: block;
+        position: absolute;
+        top: 60px; /* Adjust as needed */ 
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0; 
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger button */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for gallery */
+    }
+}
+/* General Close Button Styles */
+.close-button {
+    display: none;        /* Hidden by default */
+    position: absolute;   /* Position within the menu */
+    top: 10px;            /* Adjust positioning as needed */
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;      /* Adjust the 'X' size */
+    cursor: pointer;
+  }
+  
+
+  .image-footer {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center; /* Center the header */
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center images within rows */
+    align-items: center; /* Helps with vertical centering within a row */
+  }
+  
+  .image-footer img {
+    max-width: 75%;  /* Adjust percentage for 4 columns */
+    height: auto;     /* Maintain aspect ratio */
+    margin: 10px; 
+  }
+  
+  .image-footer h2 {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 40px; 
+  }
+  
+
+  @font-face {
+    font-family: "DIN Neuziet Grotesk"; 
+    src: url("DINNeuzeitGroteskLT-Light.woff2") format("woff2"),
+         
+  }
+  
+  h2 {
+    font-family: "DIN Neuziet Grotesk", Arial, sans-serif;
+  }
+  
+  
